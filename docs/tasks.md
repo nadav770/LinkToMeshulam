@@ -31,7 +31,7 @@
 ## Task 4 — Goal breakdown section
 - [x] Render the 6 funded areas from `CONFIG.breakdown` (structure, furnishing, mikveh, kitchen, facade, A/C)
 - [x] Each item shows amount + % of ₪800,000, with a text label — no color-only distinction (round-1 finding, plan.md §2)
-- [ ] **Commit + push to GitHub**
+- [x] **Commit + push to GitHub**
 
 ## Task 5 — Progress indicator + Monthly giving plans
 - [ ] Static progress indicator driven entirely by `CONFIG.campaign.raisedAmount` / `goalAmount` — **no** visitor-facing edit control of any kind (explicitly excluded per SPEC §11)

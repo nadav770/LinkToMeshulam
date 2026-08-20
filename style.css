@@ -121,3 +121,49 @@ body {
   text-align: center;
   padding: 0.5rem;
 }
+
+/* Breakdown */
+.breakdown {
+  padding: 1.5rem 0;
+}
+
+.breakdown h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.breakdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Distinctions are text-based (label + amount + %), not color-coded —
+   round-1 review flagged color-only dots as an accessibility gap. */
+.breakdown-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.75rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.breakdown-label {
+  font-weight: 600;
+}
+
+.breakdown-amount {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.breakdown-pct {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
