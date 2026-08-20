@@ -33,3 +33,91 @@ body {
     max-width: 720px;
   }
 }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 0 1.5rem;
+}
+
+.hero-logo-placeholder {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--color-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.hero-synagogue {
+  margin: 0 0 0.25rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.hero-title {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.hero-goal {
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Story */
+.story {
+  padding: 1.5rem 0;
+}
+
+.story h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.story-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.story-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.image-placeholder {
+  aspect-ratio: 4 / 3;
+  background: #eee;
+  border: 1px dashed #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  padding: 0.5rem;
+}
