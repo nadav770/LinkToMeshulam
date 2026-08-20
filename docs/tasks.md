@@ -8,29 +8,29 @@
 ---
 
 ## Task 1 — Project scaffold + repo setup
-- [ ] `git init` in the project folder
-- [ ] Create the GitHub repo (`LinkToMeshulam`) and add it as `origin`
-- [ ] Scaffold base files: `index.html`, `style.css`, `script.js` (or `config.js`), plain HTML/CSS/vanilla JS, no framework, no build step (SPEC §7)
-- [ ] Set `<html dir="rtl" lang="he">`, base mobile-first viewport meta
-- [ ] Add `.gitignore` (OS/editor cruft only — no build artifacts, there's no build step)
-- [ ] Add a minimal `README.md` (what this project is, link to SPEC.md/plan.md)
-- [ ] **Commit + push to GitHub**
+- [x] `git init` in the project folder
+- [x] Create the GitHub repo (`LinkToMeshulam`) and add it as `origin`
+- [x] Scaffold base files: `index.html`, `style.css`, `script.js` (or `config.js`), plain HTML/CSS/vanilla JS, no framework, no build step (SPEC §7)
+- [x] Set `<html dir="rtl" lang="he">`, base mobile-first viewport meta
+- [x] Add `.gitignore` (OS/editor cruft only — no build artifacts, there's no build step)
+- [x] Add a minimal `README.md` (what this project is, link to SPEC.md/plan.md)
+- [x] **Commit + push to GitHub**
 
 ## Task 2 — Config object
-- [ ] Implement the `CONFIG` object per plan.md §1: campaign name/goal/raised, `meshulamUrl`, `contact`, `breakdown` (6 areas), `monthlyPlans`, `cta.label`, `ga4MeasurementId`
-- [ ] Populate with placeholder values (mark Meshulam link + contact clearly as `TODO_PLACEHOLDER`)
-- [ ] Comment the config to distinguish launch-blocking fields from cosmetic ones
-- [ ] **Commit + push to GitHub**
+- [x] Implement the `CONFIG` object per plan.md §1: campaign name/goal/raised, `meshulamUrl`, `contact`, `breakdown` (6 areas), `monthlyPlans`, `cta.label`, `ga4MeasurementId`
+- [x] Populate with placeholder values (mark Meshulam link + contact clearly as `TODO_PLACEHOLDER`)
+- [x] Comment the config to distinguish launch-blocking fields from cosmetic ones
+- [x] **Commit + push to GitHub**
 
 ## Task 3 — Hero + Story sections
-- [ ] Hero: synagogue name/logo (placeholder logo ok), campaign title "ורוממתנו!", goal amount, one primary CTA slot
-- [ ] Story: growth narrative (50+ families in a space built for ~half that), captioned stats ("6 / 1:5 / 50+" — each with a label, per plan.md §2), placeholder images
-- [ ] Mobile-first RTL layout, no color-only meaning anywhere in these sections
-- [ ] **Commit + push to GitHub**
+- [x] Hero: synagogue name/logo (placeholder logo ok), campaign title "ורוממתנו!", goal amount, one primary CTA slot
+- [x] Story: growth narrative (50+ families in a space built for ~half that), captioned stats ("6 / 1:5 / 50+" — each with a label, per plan.md §2), placeholder images
+- [x] Mobile-first RTL layout, no color-only meaning anywhere in these sections
+- [x] **Commit + push to GitHub**
 
 ## Task 4 — Goal breakdown section
-- [ ] Render the 6 funded areas from `CONFIG.breakdown` (structure, furnishing, mikveh, kitchen, facade, A/C)
-- [ ] Each item shows amount + % of ₪800,000, with a text label — no color-only distinction (round-1 finding, plan.md §2)
+- [x] Render the 6 funded areas from `CONFIG.breakdown` (structure, furnishing, mikveh, kitchen, facade, A/C)
+- [x] Each item shows amount + % of ₪800,000, with a text label — no color-only distinction (round-1 finding, plan.md §2)
 - [ ] **Commit + push to GitHub**
 
 ## Task 5 — Progress indicator + Monthly giving plans

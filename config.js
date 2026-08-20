@@ -2,7 +2,7 @@
 // contact info, raised amount, tier amounts) lives here. The rest of the
 // page reads from this object; routine updates never require touching markup.
 //
-// Fields marked TODO_PLACEHOLDER are launch blockers — see plan.md §0.
+// Fields marked TODO_PLACEHOLDER are launch blockers — see docs/plan.md §0.
 const CONFIG = {
   campaign: {
     name: "ורוממתנו!",
@@ -45,7 +45,7 @@ const CONFIG = {
   },
 
   // Single unified CTA label — the draft mockup used 4 different labels
-  // across the page; this is the one we standardize on (plan.md §2).
+  // across the page; this is the one we standardize on (docs/plan.md §2).
   cta: {
     label: "לתרומה מאובטחת עכשיו",
   },
