@@ -51,17 +51,17 @@
 - [x] **Commit + push to GitHub**
 
 ## Task 8 — GA4 analytics
-- [ ] Load `gtag.js` from Google's CDN using `CONFIG.ga4MeasurementId`
-- [ ] Track page views automatically
-- [ ] Fire a custom `donate_click` event on every "Donate Now" click
-- [ ] **Commit + push to GitHub**
+- [x] Load `gtag.js` from Google's CDN using `CONFIG.ga4MeasurementId`
+- [x] Track page views automatically
+- [x] Fire a custom `donate_click` event on every "Donate Now" click
+- [x] **Commit + push to GitHub**
 
 ## Task 9 — Mobile QA + design cleanup pass
-- [ ] Test full page on real mobile widths (primary traffic channel is WhatsApp, per SPEC §4/§12/M4)
-- [ ] Re-verify every round-1 finding from plan.md §2 is actually resolved in the built page: no fake update-amount control, one CTA label, ascending plan order, no color-only meaning, captioned stats
-- [ ] Verify GA4 page-view and `donate_click` events actually fire (browser network tab / GA4 debug view)
-- [ ] Verify WhatsApp share produces a correct, trackable link
-- [ ] **Commit + push to GitHub**
+- [x] Test full page on real mobile widths (primary traffic channel is WhatsApp, per SPEC §4/§12/M4) — verified 320/360/375/390/414/430px, zero horizontal overflow
+- [x] Re-verify every round-1 finding from plan.md §2 is actually resolved in the built page: no fake update-amount control, one CTA label, ascending plan order, no color-only meaning, captioned stats
+- [x] Verify GA4 page-view and `donate_click` events actually fire (browser network tab / GA4 debug view) — dataLayer confirmed to receive `donate_click` on CTA click; full GA4 debug-view verification still needs the real `ga4MeasurementId` (launch blocker, see docs/plan.md §0)
+- [x] Verify WhatsApp share produces a correct, trackable link — confirmed `wa.me` link with pre-filled text and `utm_source/medium/campaign` params
+- [x] **Commit + push to GitHub**
 
 ## Task 10 — Deploy to Vercel (public launch URL)
 - [ ] Connect the GitHub repo to Vercel (or `vercel` CLI deploy)

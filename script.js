@@ -79,6 +79,12 @@ function renderCta() {
   const html = `<a class="cta-button" href="${CONFIG.meshulamUrl}" target="_blank" rel="noopener">${CONFIG.cta.label}</a>`;
   document.getElementById("cta-slot").innerHTML = html;
   document.getElementById("cta-slot-bottom").innerHTML = html;
+
+  document.querySelectorAll(".cta-button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (typeof gtag === "function") gtag("event", "donate_click");
+    });
+  });
 }
 
 function renderWhatsappShare() {
@@ -87,6 +93,20 @@ function renderWhatsappShare() {
   const waHref = `https://wa.me/?text=${encodeURIComponent(text)}`;
   document.getElementById("whatsapp-share-slot").innerHTML =
     `<a class="whatsapp-share-button" href="${waHref}" target="_blank" rel="noopener">שיתוף בוואטסאפ</a>`;
+}
+
+function loadGa4() {
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${CONFIG.ga4MeasurementId}`;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    dataLayer.push(arguments);
+  };
+  gtag("js", new Date());
+  gtag("config", CONFIG.ga4MeasurementId);
 }
 
 function renderContact() {
@@ -98,6 +118,7 @@ function renderFooter() {
   document.getElementById("footer-synagogue-name").textContent = CONFIG.campaign.synagogueName;
 }
 
+loadGa4();
 renderHero();
 renderBreakdown();
 renderProgress();
