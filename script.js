@@ -30,5 +30,79 @@ function renderBreakdown() {
   });
 }
 
+function renderProgress() {
+  const raised = CONFIG.campaign.raisedAmount;
+  const goal = CONFIG.campaign.goalAmount;
+  const pct = Math.min(100, Math.round((raised / goal) * 1000) / 10);
+  document.getElementById("progress-bar-fill").style.width = `${pct}%`;
+  document.getElementById("progress-text").textContent =
+    `${formatIls(raised)} מתוך ${formatIls(goal)} גויסו עד כה (${pct}%)`;
+}
+
+function renderPlans() {
+  const list = document.getElementById("plans-list");
+
+  CONFIG.monthlyPlans.forEach((plan) => {
+    const duration = plan.durationYears
+      ? `למשך ${plan.durationYears} שנים`
+      : "ללא התחייבות לתקופה קבועה";
+    const card = document.createElement("div");
+    card.className = "plan-card" + (plan.recommended ? " plan-card--recommended" : "");
+    card.innerHTML = `
+      ${plan.recommended ? '<span class="plan-badge">המסלול המומלץ</span>' : ""}
+      <span class="plan-amount">${formatIls(plan.amountPerMonth)} לחודש</span>
+      <span class="plan-label">${plan.label}</span>
+      <span class="plan-duration">${duration}</span>
+    `;
+    list.appendChild(card);
+  });
+
+  const free = CONFIG.freeAmountOption;
+  const freeCard = document.createElement("div");
+  freeCard.className = "plan-card plan-card--free";
+  freeCard.innerHTML = `
+    <span class="plan-amount">${free.label}</span>
+    <span class="plan-duration">${free.description}</span>
+  `;
+  list.appendChild(freeCard);
+}
+
+function buildShareUrl() {
+  const url = new URL(window.location.href);
+  url.searchParams.set("utm_source", "whatsapp");
+  url.searchParams.set("utm_medium", "share");
+  url.searchParams.set("utm_campaign", "vromemtanu");
+  return url.toString();
+}
+
+function renderCta() {
+  const html = `<a class="cta-button" href="${CONFIG.meshulamUrl}" target="_blank" rel="noopener">${CONFIG.cta.label}</a>`;
+  document.getElementById("cta-slot").innerHTML = html;
+  document.getElementById("cta-slot-bottom").innerHTML = html;
+}
+
+function renderWhatsappShare() {
+  const shareUrl = buildShareUrl();
+  const text = `בואו נרים ביחד את קמפיין ${CONFIG.campaign.name} — הרחבת ${CONFIG.campaign.synagogueName}. ${shareUrl}`;
+  const waHref = `https://wa.me/?text=${encodeURIComponent(text)}`;
+  document.getElementById("whatsapp-share-slot").innerHTML =
+    `<a class="whatsapp-share-button" href="${waHref}" target="_blank" rel="noopener">שיתוף בוואטסאפ</a>`;
+}
+
+function renderContact() {
+  document.getElementById("contact-phone").textContent = CONFIG.contact.phone;
+  document.getElementById("contact-email").textContent = CONFIG.contact.email;
+}
+
+function renderFooter() {
+  document.getElementById("footer-synagogue-name").textContent = CONFIG.campaign.synagogueName;
+}
+
 renderHero();
 renderBreakdown();
+renderProgress();
+renderPlans();
+renderCta();
+renderWhatsappShare();
+renderContact();
+renderFooter();

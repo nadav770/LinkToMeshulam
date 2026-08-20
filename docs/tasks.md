@@ -34,21 +34,21 @@
 - [x] **Commit + push to GitHub**
 
 ## Task 5 — Progress indicator + Monthly giving plans
-- [ ] Static progress indicator driven entirely by `CONFIG.campaign.raisedAmount` / `goalAmount` — **no** visitor-facing edit control of any kind (explicitly excluded per SPEC §11)
-- [ ] Monthly plan cards from `CONFIG.monthlyPlans`, rendered in ascending order (₪180 → ₪360 → ₪500 → ₪770), single "recommended" highlight on the ₪500 tier
-- [ ] Free-amount option included as the last card
-- [ ] **Commit + push to GitHub**
+- [x] Static progress indicator driven entirely by `CONFIG.campaign.raisedAmount` / `goalAmount` — **no** visitor-facing edit control of any kind (explicitly excluded per SPEC §11)
+- [x] Monthly plan cards from `CONFIG.monthlyPlans`, rendered in ascending order (₪180 → ₪360 → ₪500 → ₪770), single "recommended" highlight on the ₪500 tier
+- [x] Free-amount option included as the last card
+- [x] **Commit + push to GitHub**
 
 ## Task 6 — Primary CTA + WhatsApp share
-- [ ] "Donate Now" button using the single unified `CONFIG.cta.label` (pick one, drop the 4 draft variants) → outbound `<a href="{{meshulamUrl}}" target="_blank">`
-- [ ] WhatsApp share button/link, pre-filled share text, with UTM parameters so GA4 can attribute traffic (SPEC §10)
-- [ ] **Commit + push to GitHub**
+- [x] "Donate Now" button using the single unified `CONFIG.cta.label` (pick one, drop the 4 draft variants) → outbound `<a href="{{meshulamUrl}}" target="_blank">`
+- [x] WhatsApp share button/link, pre-filled share text, with UTM parameters so GA4 can attribute traffic (SPEC §10)
+- [x] **Commit + push to GitHub**
 
 ## Task 7 — Dedication pointer + Contact + Footer
-- [ ] Dedication/designated-giving section: text-only "contact us to coordinate" pointer (no on-page tier/recognition structure, per SPEC §5/§11)
-- [ ] Contact section reading from `CONFIG.contact` (placeholder phone/email until gabbai provides real ones)
-- [ ] Footer
-- [ ] **Commit + push to GitHub**
+- [x] Dedication/designated-giving section: text-only "contact us to coordinate" pointer (no on-page tier/recognition structure, per SPEC §5/§11)
+- [x] Contact section reading from `CONFIG.contact` (placeholder phone/email until gabbai provides real ones)
+- [x] Footer
+- [x] **Commit + push to GitHub**
 
 ## Task 8 — GA4 analytics
 - [ ] Load `gtag.js` from Google's CDN using `CONFIG.ga4MeasurementId`
